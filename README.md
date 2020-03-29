@@ -1,21 +1,24 @@
 # Integrate JFrog Xray with Slack
 
-![](https://greenido.files.wordpress.com/2019/12/screen-shot-2019-12-04-at-12.47.25-pm.png?w=1024)
+![](https://cdn.glitch.com/18f97c3f-b8ef-44ba-a661-e915b310696d%2FScreen%20Shot%202020-03-28%20at%205.57.46%20PM.png?v=1585443484957)
 
-This projects send messages to [Slack](http://slack.com) when JFrog Xray will send it notifications base on the policy.
+This project send messages to [Slack](http://slack.com) when JFrog Xray will send its notifications.
+
 We will use [Xray's Webhooks](https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray#ConfiguringXray-ConfiguringWebhooks) to
 define our server's and base on the [policy/rules](https://www.jfrog.com/confluence/display/JFROG/Creating+Xray+Policies+and+Rules) our
 webhook will be notified with the alerts about violations (security or licenses).
 
 ## Getting Started
 
-It makes use of [Express.js](http://expressjs.com/), a minimal and flexible Node.js framework that includes a myriad of HTTP utility methods for quickly creating robust APIs. We also use the [Body Parser](https://github.com/expressjs/body-parser) package, which is Node.js middleware that allows us to process any POST requests we receive.
+It makes use of [Express.js](http://expressjs.com/), a minimal and flexible Node.js framework that includes a myriad of
+HTTP utility methods for quickly creating robust APIs. We also use the [Body Parser](https://github.com/expressjs/body-parser) package,
+which is Node.js middleware that allows us to process any POST requests we receive.
 For some background check this [post](https://greenido.wordpress.com/todo)
 
-Check the **routes.js** file and see the end-point that are being used:
+Check the **routes.js** file and see the end-point that is being used:
 
 **/xray/api** - Get the notification from Xray and send messages to Slack.
-Each violation will be sent as one message. In order to make it more efficent we aren't sending all the issues's data per violation.
+Each violation will be sent as one message. To make it more efficient we aren't sending all the issues' data per violation.
 However, if you wish to get more information, please feel free to fork this project and add fields to the message.
 
 ### Steps To Follow
