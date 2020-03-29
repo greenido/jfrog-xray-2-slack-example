@@ -12,8 +12,11 @@ webhook will be notified with the alerts about violations (security or licenses)
 It makes use of [Express.js](http://expressjs.com/), a minimal and flexible Node.js framework that includes a myriad of HTTP utility methods for quickly creating robust APIs. We also use the [Body Parser](https://github.com/expressjs/body-parser) package, which is Node.js middleware that allows us to process any POST requests we receive.
 For some background check this [post](https://greenido.wordpress.com/todo)
 
-Check the routes.js file and see the end-points that are being used:
-/xray/api - Get the notification from Xray and send msgs to Slack.
+Check the **routes.js** file and see the end-point that are being used:
+
+**/xray/api** - Get the notification from Xray and send messages to Slack.
+Each violation will be sent as one message. In order to make it more efficent we aren't sending all the issues's data per violation.
+However, if you wish to get more information, please feel free to fork this project and add fields to the message.
 
 ### Steps To Follow
 
