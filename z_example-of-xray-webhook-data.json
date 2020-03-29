@@ -1,0 +1,1281 @@
+{
+  "created": "2020-03-28T22:27:17.954863878Z",
+  "top_severity": "High",
+  "watch_name": "Watch1",
+  "policy_name": "Policy1",
+  "issues": [
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2019-02-13T14:05:20.72Z",
+      "summary": "Spring Framework, version 5.1, versions 5.0.x prior to 5.0.10, versions 4.3.x prior to 4.3.20, and older unsupported versions on the 4.2.x branch provide support for range requests when serving static resources through the ResourceHttpRequestHandler, or starting in 5.0 when an annotated controller returns an org.springframework.core.io.Resource. A malicious user (or attacker) can add a range header with a high number of ranges, or with wide ranges that overlap, or both, for a denial of service attack. This vulnerability affects applications that depend on either spring-webmvc or spring-webflux. Such applications must also have a registration for serving static resources (e.g. JS, CSS, images, and others), or have an annotated controller that returns an org.springframework.core.io.Resource. Spring Boot applications that depend on spring-boot-starter-web or spring-boot-starter-webflux are ready to serve static resources out of the box and are therefore vulnerable.",
+      "description": "Spring Framework, version 5.1, versions 5.0.x prior to 5.0.10, versions 4.3.x prior to 4.3.20, and older unsupported versions on the 4.2.x branch provide support for range requests when serving static resources through the ResourceHttpRequestHandler, or starting in 5.0 when an annotated controller returns an org.springframework.core.io.Resource. A malicious user (or attacker) can add a range header with a high number of ranges, or with wide ranges that overlap, or both, for a denial of service attack. This vulnerability affects applications that depend on either spring-webmvc or spring-webflux. Such applications must also have a registration for serving static resources (e.g. JS, CSS, images, and others), or have an annotated controller that returns an org.springframework.core.io.Resource. Spring Boot applications that depend on spring-boot-starter-web or spring-boot-starter-webflux are ready to serve static resources out of the box and are therefore vulnerable.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.springframework:spring-webmvc:4.2.7.RELEASE",
+              "path": "",
+              "sha256": "7d5d0fe2e0da27dc671c7015805d006f9f01af3c3866e93c1d380c437bbe4f78",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.springframework:spring-webmvc:4.2.7.RELEASE",
+              "pkg_type": "Maven"
+            },
+            {
+              "name": "org.springframework:spring-web:4.2.7.RELEASE",
+              "path": "",
+              "sha256": "83755b50fdc4f75077d8bdb7d3d8816ea552fef5ad4aa20a469d9a4b6271ac65",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.springframework:spring-web:4.2.7.RELEASE",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-15756"
+    },
+    {
+      "severity": "High",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2019-01-29T12:31:54.051Z",
+      "summary": "FasterXML jackson-databind 2.x before 2.9.7 might allow remote attackers to execute arbitrary code by leveraging failure to block the slf4j-ext class from polymorphic deserialization.",
+      "description": "FasterXML jackson-databind 2.x before 2.9.7 might allow remote attackers to execute arbitrary code by leveraging failure to block the slf4j-ext class from polymorphic deserialization.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "path": "",
+              "sha256": "427a8ba9a97f63f0bf66983885f67b21db5ff1985bdc4f240c9676a077f84946",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-14718"
+    },
+    {
+      "severity": "High",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2018-03-29T11:15:10.755Z",
+      "summary": "A deserialization flaw was discovered in the jackson-databind in versions before 2.8.10 and 2.9.1, which could allow an unauthenticated user to perform code execution by sending the maliciously crafted input to the readValue method of the ObjectMapper. This issue extends the previous flaw CVE-2017-7525 by blacklisting more classes that could be used maliciously.",
+      "description": "A deserialization flaw was discovered in the jackson-databind in versions before 2.8.10 and 2.9.1, which could allow an unauthenticated user to perform code execution by sending the maliciously crafted input to the readValue method of the ObjectMapper. This issue extends the previous flaw CVE-2017-7525 by blacklisting more classes that could be used maliciously.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "path": "",
+              "sha256": "427a8ba9a97f63f0bf66983885f67b21db5ff1985bdc4f240c9676a077f84946",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2017-15095"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-07-05T11:31:11.275Z",
+      "summary": "The error page mechanism of the Java Servlet Specification requires that, when an error occurs and an error page is configured for the error that occurred, the original request and response are forwarded to the error page. This means that the request is presented to the error page with the original HTTP method. If the error page is a static file, expected behaviour is to serve content of the file as if processing a GET request, regardless of the actual HTTP method. The Default Servlet in Apache Tomcat 9.0.0.M1 to 9.0.0.M20, 8.5.0 to 8.5.14, 8.0.0.RC1 to 8.0.43 and 7.0.0 to 7.0.77 did not do this. Depending on the original request this could lead to unexpected and undesirable results for static error pages including, if the DefaultServlet is configured to permit writes, the replacement or removal of the custom error page. Notes for other user provided error pages: (1) Unless explicitly coded otherwise, JSPs ignore the the HTTP method. JSPs used as error pages must must ensure that they handle any error dispatch as a GET request, regardless of the actual method. (2) By default, the response generated by a Servlet does depend on the HTTP method. Custom Servlets used as error pages must ensure that they handle any error dispatch as a GET request, regardless of the actual method.",
+      "description": "The error page mechanism of the Java Servlet Specification requires that, when an error occurs and an error page is configured for the error that occurred, the original request and response are forwarded to the error page. This means that the request is presented to the error page with the original HTTP method. If the error page is a static file, expected behaviour is to serve content of the file as if processing a GET request, regardless of the actual HTTP method. The Default Servlet in Apache Tomcat 9.0.0.M1 to 9.0.0.M20, 8.5.0 to 8.5.14, 8.0.0.RC1 to 8.0.43 and 7.0.0 to 7.0.77 did not do this. Depending on the original request this could lead to unexpected and undesirable results for static error pages including, if the DefaultServlet is configured to permit writes, the replacement or removal of the custom error page. Notes for other user provided error pages: (1) Unless explicitly coded otherwise, JSPs ignore the the HTTP method. JSPs used as error pages must must ensure that they handle any error dispatch as a GET request, regardless of the actual method. (2) By default, the response generated by a Servlet does depend on the HTTP method. Custom Servlets used as error pages must ensure that they handle any error dispatch as a GET request, regardless of the actual method.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "path": "",
+              "sha256": "38c5a516952c1ae9c8bfcfdd9e9a02fcf466bfa50294fad450d71a41cc946432",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2017-5664"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-07-05T11:31:13.594Z",
+      "summary": "An issue was discovered in Pivotal Spring Framework before 3.2.18, 4.2.x before 4.2.9, and 4.3.x before 4.3.5. Paths provided to the ResourceServlet were not properly sanitized and as a result exposed to directory traversal attacks.",
+      "description": "An issue was discovered in Pivotal Spring Framework before 3.2.18, 4.2.x before 4.2.9, and 4.3.x before 4.3.5. Paths provided to the ResourceServlet were not properly sanitized and as a result exposed to directory traversal attacks.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.springframework:spring-webmvc:4.2.7.RELEASE",
+              "path": "",
+              "sha256": "7d5d0fe2e0da27dc671c7015805d006f9f01af3c3866e93c1d380c437bbe4f78",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.springframework:spring-webmvc:4.2.7.RELEASE",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2016-9878"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2018-09-04T12:39:16.868Z",
+      "summary": "Spring Framework (versions 5.0.x prior to 5.0.7, versions 4.3.x prior to 4.3.18, and older unsupported versions) allow web applications to change the HTTP request method to any HTTP method (including TRACE) using the HiddenHttpMethodFilter in Spring MVC. If an application has a pre-existing XSS vulnerability, a malicious user (or attacker) can use this filter to escalate to an XST (Cross Site Tracing) attack.",
+      "description": "Spring Framework (versions 5.0.x prior to 5.0.7, versions 4.3.x prior to 4.3.18, and older unsupported versions) allow web applications to change the HTTP request method to any HTTP method (including TRACE) using the HiddenHttpMethodFilter in Spring MVC. If an application has a pre-existing XSS vulnerability, a malicious user (or attacker) can use this filter to escalate to an XST (Cross Site Tracing) attack.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.springframework:spring-webmvc:4.2.7.RELEASE",
+              "path": "",
+              "sha256": "7d5d0fe2e0da27dc671c7015805d006f9f01af3c3866e93c1d380c437bbe4f78",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.springframework:spring-webmvc:4.2.7.RELEASE",
+              "pkg_type": "Maven"
+            },
+            {
+              "name": "org.springframework:spring-web:4.2.7.RELEASE",
+              "path": "",
+              "sha256": "83755b50fdc4f75077d8bdb7d3d8816ea552fef5ad4aa20a469d9a4b6271ac65",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.springframework:spring-web:4.2.7.RELEASE",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-11039"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2019-08-14T14:42:07.636Z",
+      "summary": "FasterXML Jackson Core json/UTF8StreamJsonParser.java Token Argument Logging Disk Consumption Remote DoS Weakness",
+      "description": "FasterXML Jackson Core contains a flaw in json/UTF8StreamJsonParser.java that is triggered during the logging of tokens in error messages. This may allow a remote attacker to cause a consumption of disk space on the system by generating an excessive amount of error messages.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-core:2.6.7",
+              "path": "",
+              "sha256": "918c04b9f9043d51dead2192b5d94d9f065870c9f26c8defbe9c6dbc951f304f",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "com.fasterxml.jackson.core:jackson-core:2.6.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "High",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2019-01-29T12:31:53.864Z",
+      "summary": "FasterXML jackson-databind 2.x before 2.9.7 might allow attackers to conduct external XML entity (XXE) attacks by leveraging failure to block unspecified JDK classes from polymorphic deserialization.",
+      "description": "FasterXML jackson-databind 2.x before 2.9.7 might allow attackers to conduct external XML entity (XXE) attacks by leveraging failure to block unspecified JDK classes from polymorphic deserialization.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "path": "",
+              "sha256": "427a8ba9a97f63f0bf66983885f67b21db5ff1985bdc4f240c9676a077f84946",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-14720"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2018-01-29T06:55:17.685Z",
+      "summary": "FasterXML jackson-databind through 2.8.11 and 2.9.x through 2.9.3 allows unauthenticated remote code execution because of an incomplete fix for the CVE-2017-7525 and CVE-2017-17485 deserialization flaws. This is exploitable via two different gadgets that bypass a blacklist.",
+      "description": "FasterXML jackson-databind through 2.8.11 and 2.9.x through 2.9.3 allows unauthenticated remote code execution because of an incomplete fix for the CVE-2017-7525 and CVE-2017-17485 deserialization flaws. This is exploitable via two different gadgets that bypass a blacklist.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "path": "",
+              "sha256": "427a8ba9a97f63f0bf66983885f67b21db5ff1985bdc4f240c9676a077f84946",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-5968"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-07-05T11:31:10.775Z",
+      "summary": "Apache Tomcat through 8.5.4, when the CGI Servlet is enabled, follows RFC 3875 section 4.1.18 and therefore does not protect applications from the presence of untrusted client data in the HTTP_PROXY environment variable, which might allow remote attackers to redirect an application's outbound HTTP traffic to an arbitrary proxy server via a crafted Proxy header in an HTTP request, aka an \"httpoxy\" issue. NOTE: the vendor states \"A mitigation is planned for future releases of Tomcat, tracked as CVE-2016-5388\"; in other words, this is not a CVE ID for a vulnerability.",
+      "description": "Apache Tomcat through 8.5.4, when the CGI Servlet is enabled, follows RFC 3875 section 4.1.18 and therefore does not protect applications from the presence of untrusted client data in the HTTP_PROXY environment variable, which might allow remote attackers to redirect an application's outbound HTTP traffic to an arbitrary proxy server via a crafted Proxy header in an HTTP request, aka an \"httpoxy\" issue. NOTE: the vendor states \"A mitigation is planned for future releases of Tomcat, tracked as CVE-2016-5388\"; in other words, this is not a CVE ID for a vulnerability.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "path": "",
+              "sha256": "38c5a516952c1ae9c8bfcfdd9e9a02fcf466bfa50294fad450d71a41cc946432",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2016-5388"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2018-07-04T10:12:14.119Z",
+      "summary": "In Hibernate Validator 5.2.x before 5.2.5 final, 5.3.x, and 5.4.x, it was found that when the security manager's reflective permissions, which allows it to access the private members of the class, are granted to Hibernate Validator, a potential privilege escalation can occur. By allowing the calling code to access those private members without the permission an attacker may be able to validate an invalid instance and access the private member value via ConstraintViolation#getInvalidValue().",
+      "description": "In Hibernate Validator 5.2.x before 5.2.5 final, 5.3.x, and 5.4.x, it was found that when the security manager's reflective permissions, which allows it to access the private members of the class, are granted to Hibernate Validator, a potential privilege escalation can occur. By allowing the calling code to access those private members without the permission an attacker may be able to validate an invalid instance and access the private member value via ConstraintViolation#getInvalidValue().",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.hibernate:hibernate-validator:5.2.4.Final",
+              "path": "",
+              "sha256": "fc7e2ed4079859f61390932a4f4cd5b2447e1ebc77d4915badb1a0655588697a",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.hibernate:hibernate-validator:5.2.4.Final",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2017-7536"
+    },
+    {
+      "severity": "High",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-11-22T09:02:40.536Z",
+      "summary": "A deserialization flaw was discovered in the jackson-databind, versions before 2.6.7.1, 2.7.9.1 and 2.8.9, which could allow an unauthenticated user to perform code execution by sending the maliciously crafted input to the readValue method of the ObjectMapper.",
+      "description": "A deserialization flaw was discovered in the jackson-databind, versions before 2.6.7.1, 2.7.9.1 and 2.8.9, which could allow an unauthenticated user to perform code execution by sending the maliciously crafted input to the readValue method of the ObjectMapper.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "path": "",
+              "sha256": "427a8ba9a97f63f0bf66983885f67b21db5ff1985bdc4f240c9676a077f84946",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2017-7525"
+    },
+    {
+      "severity": "High",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2019-01-29T12:31:53.958Z",
+      "summary": "FasterXML jackson-databind 2.x before 2.9.7 might allow remote attackers to execute arbitrary code by leveraging failure to block the blaze-ds-opt and blaze-ds-core classes from polymorphic deserialization.",
+      "description": "FasterXML jackson-databind 2.x before 2.9.7 might allow remote attackers to execute arbitrary code by leveraging failure to block the blaze-ds-opt and blaze-ds-core classes from polymorphic deserialization.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "path": "",
+              "sha256": "427a8ba9a97f63f0bf66983885f67b21db5ff1985bdc4f240c9676a077f84946",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-14719"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2018-07-12T07:10:39.7Z",
+      "summary": "Spring Framework, versions 5.0 prior to 5.0.5 and versions 4.3 prior to 4.3.15 and older unsupported versions, provide client-side support for multipart requests. When Spring MVC or Spring WebFlux server application (server A) receives input from a remote client, and then uses that input to make a multipart request to another server (server B), it can be exposed to an attack, where an extra multipart is inserted in the content of the request from server A, causing server B to use the wrong value for a part it expects. This could to lead privilege escalation, for example, if the part content represents a username or user roles.",
+      "description": "Spring Framework, versions 5.0 prior to 5.0.5 and versions 4.3 prior to 4.3.15 and older unsupported versions, provide client-side support for multipart requests. When Spring MVC or Spring WebFlux server application (server A) receives input from a remote client, and then uses that input to make a multipart request to another server (server B), it can be exposed to an attack, where an extra multipart is inserted in the content of the request from server A, causing server B to use the wrong value for a part it expects. This could to lead privilege escalation, for example, if the part content represents a username or user roles.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.springframework:spring-core:4.2.7.RELEASE",
+              "path": "",
+              "sha256": "d0315be62f5376d5de1d9a40ec25be14739db22461cf51d3ed8e802cde9bb795",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.springframework:spring-core:4.2.7.RELEASE",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-1272"
+    },
+    {
+      "severity": "High",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2018-07-01T10:12:14.01Z",
+      "summary": "The defaults settings for the CORS filter provided in Apache Tomcat 9.0.0.M1 to 9.0.8, 8.5.0 to 8.5.31, 8.0.0.RC1 to 8.0.52, 7.0.41 to 7.0.88 are insecure and enable 'supportsCredentials' for all origins. It is expected that users of the CORS filter will have configured it appropriately for their environment rather than using it in the default configuration. Therefore, it is expected that most users will not be impacted by this issue.",
+      "description": "The defaults settings for the CORS filter provided in Apache Tomcat 9.0.0.M1 to 9.0.8, 8.5.0 to 8.5.31, 8.0.0.RC1 to 8.0.52, 7.0.41 to 7.0.88 are insecure and enable 'supportsCredentials' for all origins. It is expected that users of the CORS filter will have configured it appropriately for their environment rather than using it in the default configuration. Therefore, it is expected that most users will not be impacted by this issue.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "path": "",
+              "sha256": "38c5a516952c1ae9c8bfcfdd9e9a02fcf466bfa50294fad450d71a41cc946432",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-8014"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-08-27T13:38:34.893Z",
+      "summary": "A malicious web application running on Apache Tomcat 9.0.0.M1 to 9.0.0.M9, 8.5.0 to 8.5.4, 8.0.0.RC1 to 8.0.36, 7.0.0 to 7.0.70 and 6.0.0 to 6.0.45 was able to bypass a configured SecurityManager via manipulation of the configuration parameters for the JSP Servlet.",
+      "description": "A malicious web application running on Apache Tomcat 9.0.0.M1 to 9.0.0.M9, 8.5.0 to 8.5.4, 8.0.0.RC1 to 8.0.36, 7.0.0 to 7.0.70 and 6.0.0 to 6.0.45 was able to bypass a configured SecurityManager via manipulation of the configuration parameters for the JSP Servlet.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "path": "",
+              "sha256": "38c5a516952c1ae9c8bfcfdd9e9a02fcf466bfa50294fad450d71a41cc946432",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2016-6796"
+    },
+    {
+      "severity": "High",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2020-03-06T09:15:52.338Z",
+      "summary": "A flaw was discovered in jackson-databind in versions before 2.9.10, 2.8.11.5 and 2.6.7.3, where it would permit polymorphic deserialization of a malicious object using commons-configuration 1 and 2 JNDI classes. An attacker could use this flaw to execute arbitrary code.",
+      "description": "A flaw was discovered in jackson-databind in versions before 2.9.10, 2.8.11.5 and 2.6.7.3, where it would permit polymorphic deserialization of a malicious object using commons-configuration 1 and 2 JNDI classes. An attacker could use this flaw to execute arbitrary code.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "path": "",
+              "sha256": "427a8ba9a97f63f0bf66983885f67b21db5ff1985bdc4f240c9676a077f84946",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2019-14892"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-08-28T13:38:34.443Z",
+      "summary": "When a SecurityManager is configured, a web application's ability to read system properties should be controlled by the SecurityManager. In Apache Tomcat 9.0.0.M1 to 9.0.0.M9, 8.5.0 to 8.5.4, 8.0.0.RC1 to 8.0.36, 7.0.0 to 7.0.70, 6.0.0 to 6.0.45 the system property replacement feature for configuration files could be used by a malicious web application to bypass the SecurityManager and read system properties that should not be visible.",
+      "description": "When a SecurityManager is configured, a web application's ability to read system properties should be controlled by the SecurityManager. In Apache Tomcat 9.0.0.M1 to 9.0.0.M9, 8.5.0 to 8.5.4, 8.0.0.RC1 to 8.0.36, 7.0.0 to 7.0.70, 6.0.0 to 6.0.45 the system property replacement feature for configuration files could be used by a malicious web application to bypass the SecurityManager and read system properties that should not be visible.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "path": "",
+              "sha256": "38c5a516952c1ae9c8bfcfdd9e9a02fcf466bfa50294fad450d71a41cc946432",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2016-6794"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-07-05T11:31:11.077Z",
+      "summary": "While investigating bug 60718, it was noticed that some calls to application listeners in Apache Tomcat 9.0.0.M1 to 9.0.0.M17, 8.5.0 to 8.5.11, 8.0.0.RC1 to 8.0.41, and 7.0.0 to 7.0.75 did not use the appropriate facade object. When running an untrusted application under a SecurityManager, it was therefore possible for that untrusted application to retain a reference to the request or response object and thereby access and/or modify information associated with another web application.",
+      "description": "While investigating bug 60718, it was noticed that some calls to application listeners in Apache Tomcat 9.0.0.M1 to 9.0.0.M17, 8.5.0 to 8.5.11, 8.0.0.RC1 to 8.0.41, and 7.0.0 to 7.0.75 did not use the appropriate facade object. When running an untrusted application under a SecurityManager, it was therefore possible for that untrusted application to retain a reference to the request or response object and thereby access and/or modify information associated with another web application.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "path": "",
+              "sha256": "38c5a516952c1ae9c8bfcfdd9e9a02fcf466bfa50294fad450d71a41cc946432",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2017-5648"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-10-29T17:30:28.404Z",
+      "summary": "When running Apache Tomcat versions 9.0.0.M1 to 9.0.0, 8.5.0 to 8.5.22, 8.0.0.RC1 to 8.0.46 and 7.0.0 to 7.0.81 with HTTP PUTs enabled (e.g. via setting the readonly initialisation parameter of the Default servlet to false) it was possible to upload a JSP file to the server via a specially crafted request. This JSP could then be requested and any code it contained would be executed by the server.",
+      "description": "When running Apache Tomcat versions 9.0.0.M1 to 9.0.0, 8.5.0 to 8.5.22, 8.0.0.RC1 to 8.0.46 and 7.0.0 to 7.0.81 with HTTP PUTs enabled (e.g. via setting the readonly initialisation parameter of the Default servlet to false) it was possible to upload a JSP file to the server via a specially crafted request. This JSP could then be requested and any code it contained would be executed by the server.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "path": "",
+              "sha256": "38c5a516952c1ae9c8bfcfdd9e9a02fcf466bfa50294fad450d71a41cc946432",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2017-12617"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2018-09-04T12:39:16.805Z",
+      "summary": "Spring Framework, versions 5.0.x prior to 5.0.7 and 4.3.x prior to 4.3.18 and older unsupported versions, allows web applications to enable cross-domain requests via JSONP (JSON with Padding) through AbstractJsonpResponseBodyAdvice for REST controllers and MappingJackson2JsonView for browser requests. Both are not enabled by default in Spring Framework nor Spring Boot, however, when MappingJackson2JsonView is configured in an application, JSONP support is automatically ready to use through the \"jsonp\" and \"callback\" JSONP parameters, enabling cross-domain requests.",
+      "description": "Spring Framework, versions 5.0.x prior to 5.0.7 and 4.3.x prior to 4.3.18 and older unsupported versions, allows web applications to enable cross-domain requests via JSONP (JSON with Padding) through AbstractJsonpResponseBodyAdvice for REST controllers and MappingJackson2JsonView for browser requests. Both are not enabled by default in Spring Framework nor Spring Boot, however, when MappingJackson2JsonView is configured in an application, JSONP support is automatically ready to use through the \"jsonp\" and \"callback\" JSONP parameters, enabling cross-domain requests.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.springframework:spring-webmvc:4.2.7.RELEASE",
+              "path": "",
+              "sha256": "7d5d0fe2e0da27dc671c7015805d006f9f01af3c3866e93c1d380c437bbe4f78",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.springframework:spring-webmvc:4.2.7.RELEASE",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-11040"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2019-05-02T14:45:39.297Z",
+      "summary": "logback SSL Certificate Validation Failure MitM Spoofing",
+      "description": "logback contains a flaw as X.509 certificates are not properly validated. By spoofing the TLS/SSL server via a certificate that appears valid, an attacker with the ability to intercept network traffic (e.g. MitM, DNS cache poisoning) can disclose and optionally manipulate transmitted data.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "ch.qos.logback:logback-core:1.1.7",
+              "path": "",
+              "sha256": "a500aedf2681fa4850e06698579140bb6233ee0e1878f98862b48ccca4b2f1de",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "ch.qos.logback:logback-core:1.1.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-08-27T13:38:34.847Z",
+      "summary": "The ResourceLinkFactory implementation in Apache Tomcat 9.0.0.M1 to 9.0.0.M9, 8.5.0 to 8.5.4, 8.0.0.RC1 to 8.0.36, 7.0.0 to 7.0.70 and 6.0.0 to 6.0.45 did not limit web application access to global JNDI resources to those resources explicitly linked to the web application. Therefore, it was possible for a web application to access any global JNDI resource whether an explicit ResourceLink had been configured or not.",
+      "description": "The ResourceLinkFactory implementation in Apache Tomcat 9.0.0.M1 to 9.0.0.M9, 8.5.0 to 8.5.4, 8.0.0.RC1 to 8.0.36, 7.0.0 to 7.0.70 and 6.0.0 to 6.0.45 did not limit web application access to global JNDI resources to those resources explicitly linked to the web application. Therefore, it was possible for a web application to access any global JNDI resource whether an explicit ResourceLink had been configured or not.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "path": "",
+              "sha256": "38c5a516952c1ae9c8bfcfdd9e9a02fcf466bfa50294fad450d71a41cc946432",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2016-6797"
+    },
+    {
+      "severity": "High",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2019-01-29T12:31:53.774Z",
+      "summary": "FasterXML jackson-databind 2.x before 2.9.7 might allow remote attackers to conduct server-side request forgery (SSRF) attacks by leveraging failure to block the axis2-jaxws class from polymorphic deserialization.",
+      "description": "FasterXML jackson-databind 2.x before 2.9.7 might allow remote attackers to conduct server-side request forgery (SSRF) attacks by leveraging failure to block the axis2-jaxws class from polymorphic deserialization.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "path": "",
+              "sha256": "427a8ba9a97f63f0bf66983885f67b21db5ff1985bdc4f240c9676a077f84946",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-14721"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2018-07-24T14:03:15.048Z",
+      "summary": "The host name verification when using TLS with the WebSocket client was missing. It is now enabled by default. Versions Affected: Apache Tomcat 9.0.0.M1 to 9.0.9, 8.5.0 to 8.5.31, 8.0.0.RC1 to 8.0.52, and 7.0.35 to 7.0.88.",
+      "description": "The host name verification when using TLS with the WebSocket client was missing. It is now enabled by default. Versions Affected: Apache Tomcat 9.0.0.M1 to 9.0.9, 8.5.0 to 8.5.31, 8.0.0.RC1 to 8.0.52, and 7.0.35 to 7.0.88.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-websocket:8.0.36",
+              "path": "",
+              "sha256": "e98cba410dc7d3e2c74aec688cb7b52ccd656b0f6a50def98c5ebbb7b6e3ecfa",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-websocket:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-8034"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-07-05T11:31:10.88Z",
+      "summary": "The code in Apache Tomcat 9.0.0.M1 to 9.0.0.M11, 8.5.0 to 8.5.6, 8.0.0.RC1 to 8.0.38, 7.0.0 to 7.0.72, and 6.0.0 to 6.0.47 that parsed the HTTP request line permitted invalid characters. This could be exploited, in conjunction with a proxy that also permitted the invalid characters but with a different interpretation, to inject data into the HTTP response. By manipulating the HTTP response the attacker could poison a web-cache, perform an XSS attack and/or obtain sensitive information from requests other then their own.",
+      "description": "The code in Apache Tomcat 9.0.0.M1 to 9.0.0.M11, 8.5.0 to 8.5.6, 8.0.0.RC1 to 8.0.38, 7.0.0 to 7.0.72, and 6.0.0 to 6.0.47 that parsed the HTTP request line permitted invalid characters. This could be exploited, in conjunction with a proxy that also permitted the invalid characters but with a different interpretation, to inject data into the HTTP response. By manipulating the HTTP response the attacker could poison a web-cache, perform an XSS attack and/or obtain sensitive information from requests other then their own.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "path": "",
+              "sha256": "38c5a516952c1ae9c8bfcfdd9e9a02fcf466bfa50294fad450d71a41cc946432",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2016-6816"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-10-29T17:30:28.725Z",
+      "summary": "The Realm implementations in Apache Tomcat versions 9.0.0.M1 to 9.0.0.M9, 8.5.0 to 8.5.4, 8.0.0.RC1 to 8.0.36, 7.0.0 to 7.0.70 and 6.0.0 to 6.0.45 did not process the supplied password if the supplied user name did not exist. This made a timing attack possible to determine valid user names. Note that the default configuration includes the LockOutRealm which makes exploitation of this vulnerability harder.",
+      "description": "The Realm implementations in Apache Tomcat versions 9.0.0.M1 to 9.0.0.M9, 8.5.0 to 8.5.4, 8.0.0.RC1 to 8.0.36, 7.0.0 to 7.0.70 and 6.0.0 to 6.0.45 did not process the supplied password if the supplied user name did not exist. This made a timing attack possible to determine valid user names. Note that the default configuration includes the LockOutRealm which makes exploitation of this vulnerability harder.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "path": "",
+              "sha256": "38c5a516952c1ae9c8bfcfdd9e9a02fcf466bfa50294fad450d71a41cc946432",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2016-0762"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-07-05T11:31:11.058Z",
+      "summary": "A bug in the handling of the pipelined requests in Apache Tomcat 9.0.0.M1 to 9.0.0.M18, 8.5.0 to 8.5.12, 8.0.0.RC1 to 8.0.42, 7.0.0 to 7.0.76, and 6.0.0 to 6.0.52, when send file was used, results in the pipelined request being lost when send file processing of the previous request completed. This could result in responses appearing to be sent for the wrong request. For example, a user agent that sent requests A, B and C could see the correct response for request A, the response for request C for request B and no response for request C.",
+      "description": "A bug in the handling of the pipelined requests in Apache Tomcat 9.0.0.M1 to 9.0.0.M18, 8.5.0 to 8.5.12, 8.0.0.RC1 to 8.0.42, 7.0.0 to 7.0.76, and 6.0.0 to 6.0.52, when send file was used, results in the pipelined request being lost when send file processing of the previous request completed. This could result in responses appearing to be sent for the wrong request. For example, a user agent that sent requests A, B and C could see the correct response for request A, the response for request C for request B and no response for request C.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "path": "",
+              "sha256": "38c5a516952c1ae9c8bfcfdd9e9a02fcf466bfa50294fad450d71a41cc946432",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2017-5647"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-07-05T11:31:13.64Z",
+      "summary": "Both Spring Security 3.2.x, 4.0.x, 4.1.0 and the Spring Framework 3.2.x, 4.0.x, 4.1.x, 4.2.x rely on URL pattern mappings for authorization and for mapping requests to controllers respectively. Differences in the strictness of the pattern matching mechanisms, for example with regards to space trimming in path segments, can lead Spring Security to not recognize certain paths as not protected that are in fact mapped to Spring MVC controllers that should be protected. The problem is compounded by the fact that the Spring Framework provides richer features with regards to pattern matching as well as by the fact that pattern matching in each Spring Security and the Spring Framework can easily be customized creating additional differences.",
+      "description": "Both Spring Security 3.2.x, 4.0.x, 4.1.0 and the Spring Framework 3.2.x, 4.0.x, 4.1.x, 4.2.x rely on URL pattern mappings for authorization and for mapping requests to controllers respectively. Differences in the strictness of the pattern matching mechanisms, for example with regards to space trimming in path segments, can lead Spring Security to not recognize certain paths as not protected that are in fact mapped to Spring MVC controllers that should be protected. The problem is compounded by the fact that the Spring Framework provides richer features with regards to pattern matching as well as by the fact that pattern matching in each Spring Security and the Spring Framework can easily be customized creating additional differences.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.springframework:spring-webmvc:4.2.7.RELEASE",
+              "path": "",
+              "sha256": "7d5d0fe2e0da27dc671c7015805d006f9f01af3c3866e93c1d380c437bbe4f78",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.springframework:spring-webmvc:4.2.7.RELEASE",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2016-5007"
+    },
+    {
+      "severity": "High",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2018-04-04T11:15:10.751Z",
+      "summary": "FasterXML jackson-databind before 2.7.9.3, 2.8.x before 2.8.11.1 and 2.9.x before 2.9.5 allows unauthenticated remote code execution because of an incomplete fix for the CVE-2017-7525 deserialization flaw. This is exploitable by sending maliciously crafted JSON input to the readValue method of the ObjectMapper, bypassing a blacklist that is ineffective if the c3p0 libraries are available in the classpath.",
+      "description": "FasterXML jackson-databind before 2.7.9.3, 2.8.x before 2.8.11.1 and 2.9.x before 2.9.5 allows unauthenticated remote code execution because of an incomplete fix for the CVE-2017-7525 deserialization flaw. This is exploitable by sending maliciously crafted JSON input to the readValue method of the ObjectMapper, bypassing a blacklist that is ineffective if the c3p0 libraries are available in the classpath.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "path": "",
+              "sha256": "427a8ba9a97f63f0bf66983885f67b21db5ff1985bdc4f240c9676a077f84946",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-7489"
+    },
+    {
+      "severity": "High",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2019-01-29T12:31:53.41Z",
+      "summary": "FasterXML jackson-databind 2.x before 2.9.8 might allow attackers to have unspecified impact by leveraging failure to block the jboss-common-core class from polymorphic deserialization.",
+      "description": "FasterXML jackson-databind 2.x before 2.9.8 might allow attackers to have unspecified impact by leveraging failure to block the jboss-common-core class from polymorphic deserialization.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "path": "",
+              "sha256": "427a8ba9a97f63f0bf66983885f67b21db5ff1985bdc4f240c9676a077f84946",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-19362"
+    },
+    {
+      "severity": "High",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2018-01-29T07:04:49.841Z",
+      "summary": "FasterXML jackson-databind through 2.8.10 and 2.9.x through 2.9.3 allows unauthenticated remote code execution because of an incomplete fix for the CVE-2017-7525 deserialization flaw. This is exploitable by sending maliciously crafted JSON input to the readValue method of the ObjectMapper, bypassing a blacklist that is ineffective if the Spring libraries are available in the classpath.",
+      "description": "FasterXML jackson-databind through 2.8.10 and 2.9.x through 2.9.3 allows unauthenticated remote code execution because of an incomplete fix for the CVE-2017-7525 deserialization flaw. This is exploitable by sending maliciously crafted JSON input to the readValue method of the ObjectMapper, bypassing a blacklist that is ineffective if the Spring libraries are available in the classpath.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "path": "",
+              "sha256": "427a8ba9a97f63f0bf66983885f67b21db5ff1985bdc4f240c9676a077f84946",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "com.fasterxml.jackson.core:jackson-databind:2.6.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2017-17485"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-08-27T13:38:34.665Z",
+      "summary": "A bug in the error handling of the send file code for the NIO HTTP connector in Apache Tomcat 9.0.0.M1 to 9.0.0.M13, 8.5.0 to 8.5.8, 8.0.0.RC1 to 8.0.39, 7.0.0 to 7.0.73 and 6.0.16 to 6.0.48 resulted in the current Processor object being added to the Processor cache multiple times. This in turn meant that the same Processor could be used for concurrent requests. Sharing a Processor can result in information leakage between requests including, not not limited to, session ID and the response body. The bug was first noticed in 8.5.x onwards where it appears the refactoring of the Connector code for 8.5.x onwards made it more likely that the bug was observed. Initially it was thought that the 8.5.x refactoring introduced the bug but further investigation has shown that the bug is present in all currently supported Tomcat versions.",
+      "description": "A bug in the error handling of the send file code for the NIO HTTP connector in Apache Tomcat 9.0.0.M1 to 9.0.0.M13, 8.5.0 to 8.5.8, 8.0.0.RC1 to 8.0.39, 7.0.0 to 7.0.73 and 6.0.16 to 6.0.48 resulted in the current Processor object being added to the Processor cache multiple times. This in turn meant that the same Processor could be used for concurrent requests. Sharing a Processor can result in information leakage between requests including, not not limited to, session ID and the response body. The bug was first noticed in 8.5.x onwards where it appears the refactoring of the Connector code for 8.5.x onwards made it more likely that the bug was observed. Initially it was thought that the 8.5.x refactoring introduced the bug but further investigation has shown that the bug is present in all currently supported Tomcat versions.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "path": "",
+              "sha256": "38c5a516952c1ae9c8bfcfdd9e9a02fcf466bfa50294fad450d71a41cc946432",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2016-8745"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-08-27T13:38:34.573Z",
+      "summary": "The CORS Filter in Apache Tomcat 9.0.0.M1 to 9.0.0.M21, 8.5.0 to 8.5.15, 8.0.0.RC1 to 8.0.44 and 7.0.41 to 7.0.78 did not add an HTTP Vary header indicating that the response varies depending on Origin. This permitted client and server side cache poisoning in some circumstances.",
+      "description": "The CORS Filter in Apache Tomcat 9.0.0.M1 to 9.0.0.M21, 8.5.0 to 8.5.15, 8.0.0.RC1 to 8.0.44 and 7.0.41 to 7.0.78 did not add an HTTP Vary header indicating that the response varies depending on Origin. This permitted client and server side cache poisoning in some circumstances.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "path": "",
+              "sha256": "38c5a516952c1ae9c8bfcfdd9e9a02fcf466bfa50294fad450d71a41cc946432",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.apache.tomcat.embed:tomcat-embed-core:8.0.36",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2017-7674"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2018-07-12T07:10:39.747Z",
+      "summary": "Spring Framework, versions 5.0 prior to 5.0.5 and versions 4.3 prior to 4.3.15 and older unsupported versions, allow applications to configure Spring MVC to serve static resources (e.g. CSS, JS, images). When static resources are served from a file system on Windows (as opposed to the classpath, or the ServletContext), a malicious user can send a request using a specially crafted URL that can lead a directory traversal attack.",
+      "description": "Spring Framework, versions 5.0 prior to 5.0.5 and versions 4.3 prior to 4.3.15 and older unsupported versions, allow applications to configure Spring MVC to serve static resources (e.g. CSS, JS, images). When static resources are served from a file system on Windows (as opposed to the classpath, or the ServletContext), a malicious user can send a request using a specially crafted URL that can lead a directory traversal attack.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.springframework:spring-webmvc:4.2.7.RELEASE",
+              "path": "",
+              "sha256": "7d5d0fe2e0da27dc671c7015805d006f9f01af3c3866e93c1d380c437bbe4f78",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.springframework:spring-webmvc:4.2.7.RELEASE",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2018-1271"
+    },
+    {
+      "severity": "Medium",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2019-11-11T08:24:46.997Z",
+      "summary": "A vulnerability was found in Hibernate-Validator. The SafeHtml validator annotation fails to properly sanitize payloads consisting of potentially malicious code in HTML comments and instructions. This vulnerability can result in an XSS attack.",
+      "description": "A vulnerability was found in Hibernate-Validator. The SafeHtml validator annotation fails to properly sanitize payloads consisting of potentially malicious code in HTML comments and instructions. This vulnerability can result in an XSS attack.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.hibernate:hibernate-validator:5.2.4.Final",
+              "path": "",
+              "sha256": "fc7e2ed4079859f61390932a4f4cd5b2447e1ebc77d4915badb1a0655588697a",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.hibernate:hibernate-validator:5.2.4.Final",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2019-10219"
+    },
+    {
+      "severity": "High",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2018-03-12T12:28:18.668Z",
+      "summary": "When an application with unsupported Codehaus versions of Groovy from 1.7.0 to 2.4.3, Apache Groovy 2.4.4 to 2.4.7 on classpath uses standard Java serialization mechanisms, e.g. to communicate between servers or to store local data, it was possible for an attacker to bake a special serialized object that will execute code directly when deserialized. All applications which rely on serialization and do not isolate the code which deserializes objects were subject to this vulnerability.",
+      "description": "When an application with unsupported Codehaus versions of Groovy from 1.7.0 to 2.4.3, Apache Groovy 2.4.4 to 2.4.7 on classpath uses standard Java serialization mechanisms, e.g. to communicate between servers or to store local data, it was possible for an attacker to bake a special serialized object that will execute code directly when deserialized. All applications which rely on serialization and do not isolate the code which deserializes objects were subject to this vulnerability.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.codehaus.groovy:groovy:2.4.7",
+              "path": "",
+              "sha256": "3a979e626477cef5dda735fa8f005a20e080104821e63a760be6db2f022b1523",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.codehaus.groovy:groovy:2.4.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2016-6814"
+    },
+    {
+      "severity": "Low",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2019-02-21T09:35:06.423Z",
+      "summary": "It was found that the log file viewer in Red Hat JBoss Enterprise Application 6 and 7 allows arbitrary file read to authenticated user via path traversal.",
+      "description": "It was found that the log file viewer in Red Hat JBoss Enterprise Application 6 and 7 allows arbitrary file read to authenticated user via path traversal.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "org.jboss.logging:jboss-logging:3.3.0.Final",
+              "path": "",
+              "sha256": "e0e0595e7f70c464609095aef9e47a8484e05f2f621c0aa5081c18e3db2d498c",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "org.jboss.logging:jboss-logging:3.3.0.Final",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2017-2595"
+    },
+    {
+      "severity": "High",
+      "type": "security",
+      "provider": "JFrog",
+      "created": "2017-08-07T11:57:36.524Z",
+      "summary": "QOS.ch Logback before 1.2.0 has a serialization vulnerability affecting the SocketServer and ServerSocketReceiver components.",
+      "description": "QOS.ch Logback before 1.2.0 has a serialization vulnerability affecting the SocketServer and ServerSocketReceiver components.",
+      "impacted_artifacts": [
+        {
+          "name": "gradle_build",
+          "display_name": "gradle_build:7",
+          "path": "default/builds/",
+          "pkg_type": "Build",
+          "sha256": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "sha1": "",
+          "depth": 0,
+          "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+          "infected_files": [
+            {
+              "name": "ch.qos.logback:logback-classic:1.1.7",
+              "path": "",
+              "sha256": "a2c3919263dbf8cc7bb748b02588cb303254d3acf9a81180b8f7727da31677d9",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "ch.qos.logback:logback-classic:1.1.7",
+              "pkg_type": "Maven"
+            },
+            {
+              "name": "ch.qos.logback:logback-core:1.1.7",
+              "path": "",
+              "sha256": "a500aedf2681fa4850e06698579140bb6233ee0e1878f98862b48ccca4b2f1de",
+              "depth": 0,
+              "parent_sha": "eaf13b1cf098a1b226c2dfbd51a5401a2634d3e02727d46ede87296007f897a2",
+              "display_name": "ch.qos.logback:logback-core:1.1.7",
+              "pkg_type": "Maven"
+            }
+          ]
+        }
+      ],
+      "cve": "CVE-2017-5929"
+    }
+  ]
+}
