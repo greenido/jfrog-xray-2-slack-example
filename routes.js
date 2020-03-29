@@ -37,11 +37,11 @@ var routes = function(app) {
 
     // send each component to Slack
     let tmpStr =
-      "🔔 From policy:" +
+      "🔔 Policy:" +
       payload.policy_name +
-      " \nwatch: " +
+      " \nWatch: " +
       payload.watch_name +
-      " \ncreated: " +
+      " \nCreated: " +
       payload.created +
       " \nNumber Of Issues: " +
       payload.issues.length +
@@ -92,7 +92,7 @@ var routes = function(app) {
     sendSlackMessage(xrayNotification);
 
     // just in case you wish to monitor this API end point
-    return res.json({ status: "Good", msg_sent: totalIssues });
+    return res.json({ status: "All Good", msg_sent: totalIssues });
   });
 };
 
