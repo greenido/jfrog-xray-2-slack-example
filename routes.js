@@ -33,70 +33,66 @@ var routes = function(app) {
   //
   app.post("/xray/api/", function(req, res) {
     let payload = req.body;
-    let msgCounter = 0;
     let totalIssues = payload.issues.length;
 
     // send each component to Slack
-    while (msgCounter < totalIssues && payload.issues[msgCounter] != null) {
-      let tmpStr =
-        "🔔 From policy:" +
-        payload.policy_name +
-        " \nwatch: " +
-        payload.watch_name +
-        " \ncreated: " +
-        payload.created +
-        " \nNumber Of Issues: " +
-        payload.issues.length +
-        "\n ℹ️ Below is the first issue:";
+    let tmpStr =
+      "🔔 From policy:" +
+      payload.policy_name +
+      " \nwatch: " +
+      payload.watch_name +
+      " \ncreated: " +
+      payload.created +
+      " \nNumber Of Issues: " +
+      payload.issues.length +
+      "\n ℹ️ Below is the first issue:";
 
-      // let's see what are we going to send to Slack
-      console.log(tmpStr + " --> sending to Slack ");
+    // let's see what are we going to send to Slack
+    console.log(tmpStr + " --> sending to Slack ");
 
-      // Build a nice msg
-      const xrayNotification = {
-        username: "Xray notifier",
-        text: tmpStr, // text
-        icon_emoji: ":bangbang:",
-        attachments: [
-          {
-            color: "#eed140",
-            // You can add more fields as the data from Xray contains more information
-            fields: [
-              {
-                title: "Type",
-                value: payload.issues[0].type,
-                short: true // long fields will be full width
-              },
-              {
-                title: "Severity",
-                value: payload.issues[0].severity,
-                short: true // long fields will be full width
-              },
-              {
-                title: "Created",
-                value: payload.issues[0].created,
-                short: true
-              },
-              {
-                title: "Provider",
-                value: payload.issues[0].provider,
-                short: true
-              },
-              {
-                title: "Summary",
-                value: payload.issues[0].summary
-              }
-            ]
-          }
-        ]
-      };
+    // Build a nice msg
+    const xrayNotification = {
+      username: "Xray notifier",
+      text: tmpStr, // text
+      icon_emoji: ":bangbang:",
+      attachments: [
+        {
+          color: "#eed140",
+          // You can add more fields as the data from Xray contains more information
+          fields: [
+            {
+              title: "Type",
+              value: payload.issues[0].type,
+              short: true // long fields will be full width
+            },
+            {
+              title: "Severity",
+              value: payload.issues[0].severity,
+              short: true // long fields will be full width
+            },
+            {
+              title: "Created",
+              value: payload.issues[0].created,
+              short: true
+            },
+            {
+              title: "Provider",
+              value: payload.issues[0].provider,
+              short: true
+            },
+            {
+              title: "Summary",
+              value: payload.issues[0].summary
+            }
+          ]
+        }
+      ]
+    };
 
-      sendSlackMessage(xrayNotification);
+    sendSlackMessage(xrayNotification);
 
-      msgCounter++;
-    }
     // just in case you wish to monitor this API end point
-    return res.json({ status: "Good", msg_sent: msgCounter });
+    return res.json({ status: "Good", msg_sent: totalIssues });
   });
 };
 
