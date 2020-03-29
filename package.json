@@ -1,0 +1,26 @@
+{
+  "name": "xray-webhook-2-slack-example",
+  "version": "0.1.1",
+  "description": "Xray Sending Messages to Slack | More details: @greenido",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "request": "^2.88.2",
+    "https": "^1.0.0"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "keywords": [
+    "node",
+    "jfrog-xray",
+    "express",
+    "api",
+    "security"
+  ],
+  "license": "MIT"
+}
