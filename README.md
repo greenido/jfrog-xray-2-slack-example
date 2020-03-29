@@ -22,6 +22,8 @@ Now it's time to see **routes.js** file and the end-point that is being used:
 Each violation will be sent as one message. To make it more efficient we aren't sending all the issues' data per violation.
 However, if you wish to get more information, please feel free to fork this project and add fields to the message.
 
+ℹ️ If you wish to see how the JSON payload from Xray is going to look like check: **z_example-of-xray-webhook-data.json**
+
 ### Steps To Follow
 
 1. Defined Xray's webook by following [these steps](https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray#ConfiguringXray-ConfiguringWebhooks).
