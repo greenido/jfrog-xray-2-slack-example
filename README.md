@@ -13,7 +13,7 @@ webhook will be notified with the alerts about violations (security or licenses)
 It makes use of [Express.js](http://expressjs.com/), a minimal and flexible Node.js framework that includes a myriad of
 HTTP utility methods for quickly creating robust APIs. We also use the [Body Parser](https://github.com/expressjs/body-parser) package,
 which is Node.js middleware that allows us to process any POST requests we receive.
-For some background check this [post](https://greenido.wordpress.com/todo)
+For some background check this [post](https://greenido.wordpress.com/?p=9820)
 
 Check the **routes.js** file and see the end-point that is being used:
 
