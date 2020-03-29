@@ -13,9 +13,10 @@ webhook will be notified with the alerts about violations (security or licenses)
 It makes use of [Express.js](http://expressjs.com/), a minimal and flexible Node.js framework that includes a myriad of
 HTTP utility methods for quickly creating robust APIs. We also use the [Body Parser](https://github.com/expressjs/body-parser) package,
 which is Node.js middleware that allows us to process any POST requests we receive.
-For some background check this [post](https://greenido.wordpress.com/?p=9820)
 
-Check the **routes.js** file and see the end-point that is being used:
+#### For more details check this [post](https://greenido.wordpress.com/?p=9820)
+
+Now it's time to see **routes.js** file and the end-point that is being used:
 
 **/xray/api** - Get the notification from Xray and send messages to Slack.
 Each violation will be sent as one message. To make it more efficient we aren't sending all the issues' data per violation.
@@ -37,3 +38,5 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/specific-string-from-slack/mo
    They should look like this:
 
 ![](https://cdn.glitch.com/18f97c3f-b8ef-44ba-a661-e915b310696d%2FScreen%20Shot%202020-03-28%20at%204.14.10%20PM.png?v=1585437298767)
+
+Go have a ☕️ and check your Slack channel for messages.
