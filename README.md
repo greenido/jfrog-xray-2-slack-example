@@ -1,4 +1,4 @@
-# AAn example integrate Slack with JFrog Xray
+# Integrate JFrog Xray with Slack
 
 ![](https://greenido.files.wordpress.com/2019/12/screen-shot-2019-12-04-at-12.47.25-pm.png?w=1024)
 
