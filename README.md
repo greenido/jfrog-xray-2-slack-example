@@ -14,7 +14,7 @@ It makes use of [Express.js](http://expressjs.com/), a minimal and flexible Node
 HTTP utility methods for quickly creating robust APIs. We also use the [Body Parser](https://github.com/expressjs/body-parser) package,
 which is Node.js middleware that allows us to process any POST requests we receive.
 
-#### For more details check this [post](https://greenido.wordpress.com/?p=9820)
+#### 🛠 For more details check this [post](https://greenido.wordpress.com/?p=9820)
 
 Now it's time to see **routes.js** file and the end-point that is being used:
 
@@ -28,7 +28,7 @@ However, if you wish to get more information, please feel free to fork this proj
 
 1. Defined Xray's webook by following [these steps](https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray#ConfiguringXray-ConfiguringWebhooks).
 
-2. Copy this project and change:
+2. Copy this [project](https://github.com/greenido/jfrog-xray-2-slack-example) and change (in .env file):
 
 ```
 SLACK_WEBHOOK_URL=https://hooks.slack.com/services/specific-string-from-slack/more-chars-from-slack-that-are-unique
