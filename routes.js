@@ -22,10 +22,9 @@ var routes = function(app) {
       "<h1>🐸 An example integrate Slack with JFrog Xray ☀️</h1> <br> <br> \
       <p>This projects send messages to Slack when JFrog Xray will send it notifications base on the policy.<br> \
       It makes use of Express.js, a minimal and flexible Node.js framework that includes a myriad of HTTP utility methods for quickly <br> creating robust APIs. We also use the Body Parser package, which is Node.js middleware that allows us to process any POST requests we receive.<br> \
-      <h4>More explanations can be found in this <a href='https://greenido.wordpress.com/?p=9820'> blog post</a> </h4>  \
-      <h3>This is what the message will look like:</h3> \
-      <img src='https://cdn.glitch.com/18f97c3f-b8ef-44ba-a661-e915b310696d%2FScreen%20Shot%202020-03-28%20at%204.14.10%20PM.png?v=1585437298767' alt='image of notification at slack' /> \
-      <h4>You can also see this project: <a href='https://glitch.com/edit/#!/xray-2-slack?path=README.md:23:0'>README.md</a> </h4>"
+      <h4>🎯 More explanations can be found in this <a href='https://greenido.wordpress.com/?p=9820'  target='_blank'> blog post</a> </h4> \
+      <h4> <a href='https://github.com/greenido/jfrog-xray-2-slack-example' target='_blank'>🛠 The GitHub Repo </a> </h4> <hr> <h3>🎫 This is what the message will look like:</h3> <img src='https://cdn.glitch.com/18f97c3f-b8ef-44ba-a661-e915b310696d%2FScreen%20Shot%202020-03-28%20at%204.14.10%20PM.png?v=1585437298767' alt='image of notification at slack' /> \
+      <h4>🎬 You can also see this project: <a href='https://glitch.com/edit/#!/xray-2-slack?path=README.md:23:0'>README.md</a> </h4>"
     );
   });
 

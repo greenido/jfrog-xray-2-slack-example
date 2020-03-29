@@ -3,7 +3,6 @@
 // Author: @greenido
 // Date: April 2019
 //
-//
 // This is where the app starts, and sets things up
 // We require the packages we need, body parser and express, and then set up body parser to accept
 // JSON and URL encoded values. We then include the `routes.js` file, in which we define the API
