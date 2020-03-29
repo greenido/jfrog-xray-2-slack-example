@@ -1,6 +1,6 @@
 {
   "name": "xray-webhook-2-slack-example",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Xray Sending Messages to Slack | More details: @greenido",
   "main": "server.js",
   "scripts": {

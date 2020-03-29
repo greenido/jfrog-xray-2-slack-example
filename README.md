@@ -28,6 +28,7 @@ However, if you wish to get more information, please feel free to fork this proj
 ### Steps To Follow
 
 1. Defined Xray's webook by following [these steps](https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray#ConfiguringXray-ConfiguringWebhooks).
+   If you wish to see (even) better tutorial check this [post](https://greenido.wordpress.com/?p=9820).
 
 2. Copy this [project](https://github.com/greenido/jfrog-xray-2-slack-example) and change (in .env file):
 
