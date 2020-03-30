@@ -27,10 +27,12 @@ However, if you wish to get more information, please feel free to fork this proj
 
 ### Steps To Follow
 
+0. [Install NodeJS](https://nodejs.org/en/download/package-manager/)
+
 1. Defined Xray's webook by following [these steps](https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray#ConfiguringXray-ConfiguringWebhooks).
    If you wish to see (even) better tutorial check this [post](https://greenido.wordpress.com/?p=9820).
 
-2. Copy this [project](https://github.com/greenido/jfrog-xray-2-slack-example) and change (in .env file):
+1. Copy this [project](https://github.com/greenido/jfrog-xray-2-slack-example) and change (in .env file):
 
 ```
 SLACK_WEBHOOK_URL=https://hooks.slack.com/services/specific-string-from-slack/more-chars-from-slack-that-are-unique
@@ -42,5 +44,9 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/specific-string-from-slack/mo
    They should look like this:
 
 ![](https://cdn.glitch.com/18f97c3f-b8ef-44ba-a661-e915b310696d%2FScreen%20Shot%202020-03-28%20at%204.14.10%20PM.png?v=1585437298767)
+
+Btw, if you wish to be up and running without the need to install anything you can take [this project](https://glitch.com/edit/#!/xray-2-slack)
+and 'remix' it to create your own version.
+This will give you the option to skip step #0 and have a working example in minutes.
 
 Go have a ☕️ and check your Slack channel for messages.
