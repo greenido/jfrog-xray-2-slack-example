@@ -5,6 +5,8 @@
 This project integrate [Slack](http://slack.com) and [JFrog Xray](https://jfrog.com/xray/) so you could get Xray's notifications
 directly to your Slack.
 
+![](https://cdn.glitch.com/18f97c3f-b8ef-44ba-a661-e915b310696d%2FScreen%20Shot%202020-03-30%20at%2010.55.10%20AM.png?v=1585590926945)
+
 We will use [Xray's Webhooks](https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray#ConfiguringXray-ConfiguringWebhooks) to
 define our server's and base on the [policy/rules](https://www.jfrog.com/confluence/display/JFROG/Creating+Xray+Policies+and+Rules) our
 webhook will be notified with the alerts about violations (security or licenses).
