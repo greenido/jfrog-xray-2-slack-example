@@ -45,7 +45,9 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/specific-string-from-slack/mo
 
 ![](https://cdn.glitch.com/18f97c3f-b8ef-44ba-a661-e915b310696d%2FScreen%20Shot%202020-03-28%20at%204.14.10%20PM.png?v=1585437298767)
 
-Btw, if you wish to be up and running without the need to install anything you can take [this project](https://glitch.com/edit/#!/xray-2-slack)
+## 🐸 The Easy Way
+
+If you wish to be up and running without the need to install anything you can take [this project](https://glitch.com/edit/#!/xray-2-slack)
 and 'remix' it to create your own version.
 This will give you the option to skip step #0 and have a working example in minutes.
 
