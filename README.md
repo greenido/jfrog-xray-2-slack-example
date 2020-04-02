@@ -29,7 +29,13 @@ However, if you wish to get more information, please feel free to fork this proj
 
 ### Steps To Follow
 
-0. [Install NodeJS](https://nodejs.org/en/download/package-manager/)
+0. [Install NodeJS](https://nodejs.org/en/download/package-manager/) and make sure you run:
+
+```
+npm install
+```
+
+So you will have all the modules that we are using.
 
 1. Defined Xray's webook by following [these steps](https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray#ConfiguringXray-ConfiguringWebhooks).
    If you wish to see (even) better tutorial check this [post](https://greenido.wordpress.com/?p=9820).
