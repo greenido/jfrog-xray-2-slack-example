@@ -8,6 +8,7 @@
 //
 const fs = require("fs");
 const https = require("https");
+const dotenv = require("dotenv");
 
 //
 // Main End points of our app
@@ -67,7 +68,7 @@ var routes = function(app) {
             {
               title: "Severity",
               value: payload.issues[0].severity,
-              short: true 
+              short: true
             },
             {
               title: "Created",
@@ -103,6 +104,11 @@ var routes = function(app) {
  */
 function sendSlackMessage(messageBody) {
   try {
+
+    // Loads environment variables from a .env file into process.env
+    // console.log("------------------------"+process.env.SLACK_WEBHOOK_URL);
+    dotenv.config();
+
     //console.log("=== " + messageBody);
     messageBody = JSON.stringify(messageBody);
   } catch (e) {
