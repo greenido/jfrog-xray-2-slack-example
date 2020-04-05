@@ -9,8 +9,8 @@
 const fs = require("fs");
 const https = require("https");
 const dotenv = require("dotenv");
+
 // Loads environment variables from the .env file into process.env
-// console.log("------------------------"+process.env.SLACK_WEBHOOK_URL);
 dotenv.config();
 
 //
