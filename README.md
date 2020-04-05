@@ -40,7 +40,7 @@ So you will have all the modules that we are using.
 1. Defined Xray's webook by following [these steps](https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray#ConfiguringXray-ConfiguringWebhooks).
    If you wish to see (even) better tutorial check this [post](https://greenido.wordpress.com/?p=9820).
 
-1. Copy this [project](https://github.com/greenido/jfrog-xray-2-slack-example) and change (in .env file):
+1. Copy this [project](https://github.com/greenido/jfrog-xray-2-slack-example) and change (in .env file placed in the root directory):
 
 ```
 SLACK_WEBHOOK_URL=https://hooks.slack.com/services/specific-string-from-slack/more-chars-from-slack-that-are-unique
